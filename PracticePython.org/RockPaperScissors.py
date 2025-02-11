@@ -13,28 +13,24 @@ while newGame != True:
     #rock win conditionals 
     if player1Input == "rock" and player2Input =="scissors":
         print("Player One Wins!!")
-    elif player1Input == "rock" and player2Input =="paper":
-        print("Player Two Wins!!")
-
-        
+      
     #scissor win conditionals
-    elif player1Input == "scissors" and player2Input =="rock":
-        print("Player Two Wins!!")
     elif player1Input == "scissors" and player2Input =="paper":
         print("Player One Wins!!")
-  
         
     #paper win conditionals 
     elif player1Input == "paper" and player2Input =="rock":
         print("Player One Wins!!")
-    elif player1Input == "paper" and player2Input == "scissors":
-        print("Player Two Wins!!")
     
     #tie conditional 
     elif player1Input == player2Input:
         print("Its a tie!!")
 
-    
+    #since weve already checked for player ones winnings, if none of them are true, and its not a draw, player two mustve won
+    else: 
+        print("Player Two wins!! ")
+        
+
     newGame = bool(input("Would you like to stop? (True // False)\n")) #get user input for continuation of game 
     
 
