@@ -14,10 +14,12 @@ else:
 #-------------------------------------------------------------------------------------------------# 
 
 #ticket box test
-
-height = 0.0
-age = 0 
-age = int(input("Please enter your age: "))
+#vars
+height = 0.0 #float
+age = 0 #int
+ticketPrice = 0 #int
+photos = True #bool
+age = int(input("Please enter your age: ")) #gets user input
 height = float(input("Please enter your height in CM: ")) #gets user input
 height = round(height) #rounds height
 
@@ -26,13 +28,21 @@ if height >= 120: #checks if height is bigger than 120
     
     if age < 12: #nested if else statment
         print("Your ticket will cost $5")
-        
+        ticketPrice = 5
     elif age <= 18: #else if statment, for more conditionals
            print("Your ticket will cost $7")
-           
+           ticketPrice = 7
     else:
         print("Your ticket will cost $12")
-        
+        ticketPrice = 12
+    
+    photos = bool(input("Would you like photos with your ticket? (True / False: )")) #asks user if they want photos, no matter age
+    
+    if photos == True:
+        ticketPrice += 3 #adds to ticket bill
+    
+    print(f"Your final ticket cost is ${ticketPrice}") #outputs full ticket price 
+
 else: #if height is less than 120
     print("Awh! You cannot ride the ride.")
 
@@ -58,4 +68,3 @@ else: #if its not even, it has to be odd
     print(f"{num} is not even")
     
 #-------------------------------------------------------------------------------------------------# 
-
