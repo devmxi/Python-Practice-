@@ -16,6 +16,6 @@ def isprimenum(x):
     return
 
 num = getint() #num is set to get input function 
-divisorRange = range(2,num) #range from 2 - num as all prime numbers are divisble by itself and one 
+divisorRange = range(2, num -1 ) #range from 2 - num-1  as all prime numbers are divisble by itself and one 
 
 isprimenum(num) #using function to output message
