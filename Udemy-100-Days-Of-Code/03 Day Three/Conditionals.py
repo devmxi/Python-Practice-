@@ -67,4 +67,3 @@ if num % 2 == 0: #checks if it divides cleanly therfore it would be even
 else: #if its not even, it has to be odd 
     print(f"{num} is not even")
     
-#-------------------------------------------------------------------------------------------------# 
