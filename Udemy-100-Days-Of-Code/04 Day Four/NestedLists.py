@@ -32,5 +32,5 @@ vegtables = [ "Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
 dirtyDozen = [fruits, vegtables] #* Nested List, with the fruits list and vegtables list in the same list
 print(dirtyDozen) #showcases structutre 
 print(dirtyDozen[0]) #*prints out first list, as its the first item
-print(dirtyDozen[0][2])
-#-------------------------------------------------------------------------------------------------# 
+print(dirtyDozen[0][2]) #* goes to the first list, fruits, then prints out the 2nd item in that list, which is my fav fruit: apples 
+

@@ -84,3 +84,5 @@ elif userChoice == compChoice:
     #since weve already checked for player ones winnings, if none of them are true, and its not a draw, player two mustve won
 else: 
         print("You lose :c ")
+        
+#4/100 its gonna be easy peasy
