@@ -1,5 +1,6 @@
 #fixed loops \\ for loops 
 # loops that loop for a ceritan range
+#* WHEN TO USE THEM: WHEN YOU NEED TO DO SOMETHING WITH EACH ITEM
 
 fruits = ["Apples", "Grapes", "Bananas"]
 
