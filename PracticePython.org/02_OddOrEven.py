@@ -3,17 +3,17 @@ num = 0 #int
 x = 0 #int 
 
 
-num = int(input("Please enter a positive number")) #assigning value to var and asking for input 
+num = int(input("Please enter a positive number: ")) #assigning value to var and asking for input 
 
 #input validation 
 while num < 0 :
-    num = int(input("Error! Please enter a postiive number")) #error message output 
+    num = int(input("Error! Please enter a postiive number: ")) #error message output 
 
-x = int(input("Please enter another positive number")) #assigning value to var and asking for input 
+x = int(input("Please enter another positive number: ")) #assigning value to var and asking for input 
 
 #input validation 
 while x < 0 :
-    x = int(input("Error! Please enter a postiive number")) #error message output 
+    x = int(input("Error! Please enter a postiive number: ")) #error message output 
 
 
 #proccesses / outputs 
