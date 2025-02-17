@@ -1,4 +1,6 @@
 import random
+import Word_List 
+import Art 
 #!MADE BY: chrishorton on github
 stages= ['''
   +---+
@@ -51,34 +53,34 @@ stages= ['''
       |
 =========''']
 
-#Word bank of animals
-words = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
-         'coyote crow deer dog donkey duck eagle ferret fox frog goat '
-         'goose hawk lion lizard llama mole monkey moose mouse mule newt '
-         'otter owl panda parrot pigeon python rabbit ram rat raven '
-         'rhino salmon seal shark sheep skunk sloth snake spider '
-         'stork swan tiger toad trout turkey turtle weasel whale wolf '
-         'wombat zebra ')
-#!MADE BY: chrishorton on github
-word_list=["aardvark", "baboon", "camel"]
 counter = 0
 placeholder = ""
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(Word_List.words)
 gameover = False
 correct_guess=[]
-lives = 6 #TODO SET Lives to 6 and loose one whenever they guess an incorrect letter
+lives = 6
 
 for char in range(0, len(chosen_word)):
     placeholder += "_"
 
+print(Art.art)
+print("")
+print("This is your word:")
 print(placeholder)
+print("")
 
 while gameover == False:
+    print(f"You have {lives} lives left \n")
+    
     guess = str(input("Please guess a letter: ")).lower()
     
+    while guess in correct_guess:
+        guess = str(input(f"You`ve already guessed {guess}. Please guess again: ")).lower()
+    
     if guess not in chosen_word:
+        print(f"{guess}, was not in the word. You loose a life.")
         lives -= 1
-           
+        
     if lives == 6:
         print(stages[0])
     elif lives == 5:
@@ -94,7 +96,9 @@ while gameover == False:
     elif lives == 0:
         print(stages[6])
         gameover = True
-        print("You Lose")
+        print(f"You Lose, You lost all your lives. The word was: {chosen_word}")
+        break
+        
     
     display = ""
     
@@ -109,11 +113,12 @@ while gameover == False:
 
     print(display)
     
+
+    
     if "_" not in display:
-        print("You win")
+        print("You win!! You guessed the word!! Well done!")
         gameover = True
     if lives <= 0:
         print("You Lose")
         gameover = True
         
-            
