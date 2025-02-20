@@ -28,3 +28,5 @@ for i in range(0, numSymbols):
 
 print("")
 print(f"your password is {password}")
+
+#5/100 - kets go!
