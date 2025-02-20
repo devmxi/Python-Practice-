@@ -38,6 +38,7 @@ while morecalculations != "exit":
     if morecalculations == "y": #* checks if the user has previously inputed that they want to continue with the calculations 
         num1 = total #* sets num 1 to total if true 
     else:
+        print('\n')*20
         num1 = float(input("What's the first number: ")) #asks for user input 
         
     for signs in operators:#* ouputs all operators 
