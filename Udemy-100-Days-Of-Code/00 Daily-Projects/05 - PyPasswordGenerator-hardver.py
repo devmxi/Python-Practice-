@@ -33,3 +33,5 @@ for char in passwordlist:
     finalpass += char
     
 print(f"Your password is: {finalpass}")
+
+#5/100 - lets go!

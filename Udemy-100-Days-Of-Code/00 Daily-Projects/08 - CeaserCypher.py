@@ -36,3 +36,4 @@ while exit != 'false':
     ceasar(direction, text, shift)
     exit = input("Would you like to continue? True \\ False: ").lower()
     
+#8/100 - this was fun 

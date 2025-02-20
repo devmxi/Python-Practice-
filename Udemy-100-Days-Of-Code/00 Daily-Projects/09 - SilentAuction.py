@@ -47,3 +47,4 @@ def finding_heighst_bidder(dictionary):
 finding_heighst_bidder(bids)
 
 
+#9/100 - Nearly at day 10!!
