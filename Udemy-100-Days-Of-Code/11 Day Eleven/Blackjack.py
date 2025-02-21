@@ -2,6 +2,8 @@ import random
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 playgame = "y"
 cardorpass = "y"
+gamecounter = 0
+score = 0.0
 
 def calcscore(cards):
     totalscore = 0
@@ -27,7 +29,11 @@ def newcard(condition):
         acevalue(computercards)
 
 while playgame == "y":
+    
     playgame = str(input("Would you like to play a game of BlackJack? Type 'y' or 'n': ")).lower()
+    
+    if gamecounter > 0:
+            print('\033c')
     
     if playgame == 'n':
         break
@@ -39,7 +45,7 @@ while playgame == "y":
         print(f"\t Your cards: {usercards}, current score: {calcscore(usercards)}")
         print(f"\t Computer's first card: {computercards[0]}")
         
-        cardorpass = str(input("Type 'y; to get another card, type 'n' to pass: ")).lower()
+        cardorpass = str(input("Type 'y' to get another card, type 'n' to pass: ")).lower()
         
         newcard(cardorpass)
         
@@ -53,15 +59,25 @@ while playgame == "y":
         #     computercards.append(random.choice(cards))
         ouputfinalscore()
         print("\t You went over 21. You loose.")
+        gamecounter += 1
+        score -= 1
         
-    elif calcscore(usercards) > calcscore(computercards):
+    elif calcscore(usercards) > calcscore(computercards) or calcscore(computercards) > 21:
         ouputfinalscore()
         print("\t you win")
+        gamecounter += 1
+        score += 1
         
     elif calcscore(usercards) == calcscore(computercards):
         ouputfinalscore()
         print("\t Its a tie")
+        gamecounter += 1
+        score += 0.5
         
     else:
         ouputfinalscore()
         print("\t You loose")
+        gamecounter += 1
+        score -= 1
+
+print(f"Thank you for playing, you ended with a score of {gamecounter}")
