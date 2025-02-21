@@ -96,3 +96,5 @@ while playgame == "y": #*while they want to play the game the code will loop
 
 #* final output if they dont wish to continue
 print(f"Thank you for playing! You played {gamecounter} games, and you ended with a score of {score}")
+
+#11/100 - thought this project would be harder ngl

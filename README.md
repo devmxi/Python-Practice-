@@ -5,7 +5,7 @@ I enrolled in a 100 day pyhon course on Udemy by Angelina Yu; and do python chal
 
 I want to have a collection of all the python projects I do outside of school - which will be showcased here, and on my website! 
 
-10 / 100 - daily python challange 
+11 / 100 - daily python challange 
 
 
 if youre amelia byrne, go to /udemy-100-days-of-code/08 day eight/love score
