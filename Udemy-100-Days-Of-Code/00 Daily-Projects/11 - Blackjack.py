@@ -33,7 +33,12 @@ def newcard(condition):
     else:
         computercards.append(random.choice(cards))
         acevalue(computercards)
-
+        #*chekcing if dealers value is 16 or less, so they have to take another card
+        if calcscore(computercards) <= 16:
+            computercards.append(random.choice(cards))
+            acevalue(computercards)
+            
+print("Welcome to BlackJack. Here is the scoring: \n Win: +1 \n Tie: +0.5 \n Loss: - 1 \n")
 while playgame == "y": #*while they want to play the game the code will loop
     
     playgame = str(input("Would you like to play a game of BlackJack? Type 'y' or 'n': ")).lower() #* asks for user input if theyd like to play blackjack
