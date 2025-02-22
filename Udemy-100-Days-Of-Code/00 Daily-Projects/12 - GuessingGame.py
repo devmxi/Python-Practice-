@@ -32,10 +32,9 @@ def guess(guessamt):
         elif guessamt < RANDNUM:
             print("Too low. \nGuess again.")
             return False
-        
-    if guessamt == RANDNUM:
-        print("Correct! You got it right!")
-        return True
+        else:
+            print("Correct! You got it right!")
+            return True
     
 #TODO Print welcome message
 print("Welcome to the Number Guessing Game! \nI'm thinking of a number between 1 - 100.")
