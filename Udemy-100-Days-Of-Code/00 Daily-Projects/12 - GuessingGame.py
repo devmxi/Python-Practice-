@@ -55,4 +55,4 @@ while GameOver == False:
             print("You have 0 lives remaining. You lose.") #* loss output
             GameOver = True
         
-        
+#12/100 - this was a challange but we got through it!! 
