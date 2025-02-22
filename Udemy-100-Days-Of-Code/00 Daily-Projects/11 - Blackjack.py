@@ -21,7 +21,7 @@ def ouputfinalscore():
     
 def acevalue(deck):
     '''Checks if the ace is in their deck, if it is and would make them go over 21, it is converted to a 1'''
-    if 11 in deck and calcscore(deck) == 21:
+    if 11 in deck and calcscore(deck) > 21:
        deck[deck.index(11)] = 1
 
 def newcard(condition):
@@ -54,7 +54,9 @@ while playgame == "y": #*while they want to play the game the code will loop
             print('\033c')
             
     #* generates random deck 
-    usercards = [random.choice(cards), random.choice(cards)]
+    usercards = [random.choice(cards)]
+    usercards.append(random.choice(cards))
+    acevalue(usercards)
     computercards = [random.choice(cards)]
     
     #* loops for both cards not equalling 21
