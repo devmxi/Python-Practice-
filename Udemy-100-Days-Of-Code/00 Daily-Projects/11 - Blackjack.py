@@ -34,16 +34,17 @@ def newcard(condition):
         computercards.append(random.choice(cards))
         acevalue(computercards)
         #*chekcing if dealers value is 16 or less, so they have to take another card
-        if calcscore(computercards) <= 16:
+        while calcscore(computercards) <= 16:
             computercards.append(random.choice(cards))
             acevalue(computercards)
-            
+
 print("Welcome to BlackJack. Here is the scoring: \n Win: +1 \n Tie: +0.5 \n Loss: - 1 \n")
 while playgame == "y": #*while they want to play the game the code will loop
     
     playgame = str(input("Would you like to play a game of BlackJack? Type 'y' or 'n': ")).lower() #* asks for user input if theyd like to play blackjack
     #*input validation
-    while playgame != "y" or playgame != "n":
+    
+    while playgame != "y" and playgame != "n":
         playgame = str(input("Error, please enter 'y' or 'n': ")).lower()
     
     if playgame == 'n': #* checks if not, then breaks loop
@@ -67,7 +68,7 @@ while playgame == "y": #*while they want to play the game the code will loop
         cardorpass = str(input("Type 'y' to get another card, type 'n' to pass: ")).lower()
         
         #*Input validation
-        while cardorpass != "y" or cardorpass != "n":
+        while cardorpass != "y" and cardorpass != "n":
             cardorpass = str(input("Error, please enter 'y' or 'n': ")).lower()
         
         newcard(cardorpass) #*using function to check conditional
