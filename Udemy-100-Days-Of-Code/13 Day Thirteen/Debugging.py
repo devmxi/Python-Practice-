@@ -39,13 +39,13 @@ function1()
 
 dicenums = [1,2,3,4,5,6]
 dice_pos = random.randint(1,6)
-print(dicenums[dice_pos])
+#print(dicenums[dice_pos])
 
 #* With these types of bugs, we should try to reproduce the error so we can truley figure out whats going wrong
 
 #! This code will produce an error 100% of the time, due to testing we found out that its only the 6th index that causes an issue
-dicenums = [1,2,3,4,5,6]
-print(dicenums[6])
+# dicenums = [1,2,3,4,5,6]
+# print(dicenums[6])
 
 #* now that we know where the problem is, and what causes the problem (the index being out of range) we can fix it
 
@@ -88,3 +88,46 @@ elif year >= 1994:
 #-------------------------------------------------------------------------------------------------#
 
 #* problem four: 
+
+#* fix in editor editors, they will show up highlighted. 
+
+#* look up in console errors
+
+try:
+    age = int(input("How old are you: "))
+except ValueError:
+    print("You have not typed in a number, please use the digits on your keyboard: ")
+    
+#* this will catch the console error, and display a diffrent pathway
+
+#-------------------------------------------------------------------------------------------------#
+
+#* problem five:
+
+#* use print to find where the error is 
+
+#-------------------------------------------------------------------------------------------------#
+
+#* problem six:
+
+#* use a debugger!
+#* I used a debugger to fix this code!
+
+import random
+import Maths
+
+def mutate(listA): # function to change every item in a list 
+    listB = [] #* assigning a new empty list 
+    new_item = 0 #* assigning a new empty item
+    
+    for item in listA: #* for loop for each item in the original list 
+        new_item = item * 2
+        new_item += random.randint(1,3)
+        new_item = Maths.add(new_item, item)
+        listB.append(new_item) #* adds mutilated version to new list 
+        
+    print(listB) #* prints new list
+
+mutate([1,3,4,5,6,3,6,4])
+
+#-------------------------------------------------------------------------------------------------#
