@@ -19,11 +19,11 @@ def randCeleb(celeb1, celeb2, celebrities):
     #TODO get + return random values from the dictionaries
     celeb2 = random.choice(data)
     
-    while celeb2 == celeb1:
-        celeb2 = random.choice(data)
-    
     celebrities[0] = celeb1
     celebrities[1] = celeb2
+    
+    while celebrities[0] == celebrities[1]:
+        celebrities[1] = random.choice(data)
     
     return celebrities 
     
