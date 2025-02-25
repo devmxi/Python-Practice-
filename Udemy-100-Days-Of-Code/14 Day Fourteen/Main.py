@@ -5,6 +5,7 @@ import Art
 from GameData import data
 
 userInput = ""
+previouscelebrities = []
 celeb1 = random.choice(data)
 celeb2 = {}
 celebs = [""] * 2
