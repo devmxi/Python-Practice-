@@ -9,6 +9,11 @@ machine = CoffeeMaker()
 machine_money = MoneyMachine()
 menu = Menu()
 
+def print_report():
+        machine.report()
+        machine_money.report()
+    
+
 while machine_power == "on":
     #*gets user input
     user_choice = input(f"What would you like to drink? {menu.get_items()}: ").lower()
@@ -17,8 +22,7 @@ while machine_power == "on":
     if user_choice == "off": 
         break
     elif user_choice == "report":
-        machine.report()
-        machine_money.report()
+        print_report()
         
     #* gets menu item of selected drink
     order = menu.find_drink(user_choice)
