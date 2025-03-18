@@ -14,7 +14,6 @@ class QuizBrain:
         
     def more_questions(self):
         return self.question_number >= len(self.questions_list) #* checks the condition, if true it returns true
-
     
     def next_question(self):
         current_question = self.questions_list[self.question_number]
