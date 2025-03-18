@@ -9,16 +9,21 @@ machine = CoffeeMaker()
 machine_money = MoneyMachine()
 menu = Menu()
 
-while machine_power == "on": 
-    user_choice = input(f"What would you like to drink? {menu.get_items()}: ").lower
+while machine_power == "on":
+    #*gets user input
+    user_choice = input(f"What would you like to drink? {menu.get_items()}: ").lower()
     
-    if user_choice == "off":
+     #*checks for custom commands
+    if user_choice == "off": 
         break
     elif user_choice == "report":
         machine.report()
         machine_money.report()
-    else:
-        order = menu.find_drink(user_choice)
-        if machine.is_resource_sufficient(order) and machine_money.make_payment(order.cost):
-            machine.make_coffee(order)
         
+    #* gets menu item of selected drink
+    order = menu.find_drink(user_choice)
+    if machine.is_resource_sufficient(order): #*checks for sufficient resources
+        price = order.cost #* gets cost of drink
+        if machine_money.make_payment(price): #*gets payment
+            machine.make_coffee(order) #*makes coffee
+            
