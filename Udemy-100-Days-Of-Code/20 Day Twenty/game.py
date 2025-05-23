@@ -56,7 +56,7 @@ while play_again == "yes":
         
     if play_again == "yes":
          screen.clear()
-    else:
+    elif play_again == "" or play_again == "no":
         screen.bye()
 
     
