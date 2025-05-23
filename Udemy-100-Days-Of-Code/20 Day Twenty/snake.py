@@ -5,7 +5,7 @@ MOVEMENT_STEPS = 20
 UP = 90
 DOWN = 270
 LEFT = 180
-RIGHT = 0 
+RIGHT = 0
 
 class Snake:
     def __init__(self):
@@ -13,11 +13,12 @@ class Snake:
         self.yvalue = 0
         self.segments = []  
         self.create()
+        self.head = self.segments[0]
         
     def create(self):
         for x in range(0, 3):
             new_turtle = Turtle("square")
-            new_turtle.color("white") 
+            new_turtle.color("dark green", "green") 
             new_turtle.penup()
             self.xvalue -= 20
             new_turtle.goto(self.xvalue, 0)
@@ -46,3 +47,14 @@ class Snake:
     def right(self):
         if self.segments[0].heading() != LEFT:
             self.segments[0].setheading(RIGHT)
+    
+    def add_segment(self, position):
+            new_turtle = Turtle("square")
+            new_turtle.color("dark green", "green") 
+            new_turtle.penup()
+            new_turtle.goto(position)
+            self.segments.append(new_turtle)
+        
+    def extend(self):
+        #add new segment to snake
+        self.add_segment(position= self.segments[-1].position())
